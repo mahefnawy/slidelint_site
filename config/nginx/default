@@ -5,8 +5,9 @@ map $http_upgrade $connection_upgrade {
 }
 
 server {
-	listen 80 default_server;
-	listen [::]:80 default_server ipv6only=on;
+	listen 80;
+	listen [::]:80;
+        server_name slidelint.net;
 
 	location / {
 		client_max_body_size	1G;
@@ -38,11 +39,22 @@ server {
 }
 
 server {
+	listen 80;
+	listen [::]:80;
 	server_name code.slidelint.net c.slidelint.net;
 	return 301 $scheme://github.com/timvideos/slidelint_site$request_uri;
 }
 
 server {
+	listen 80;
+	listen [::]:80;
 	server_name bugs.slidelint.net b.slidelint.net;
 	return 301 $scheme://github.com/timvideos/slidelint_siteissues/new;
+}
+
+server {
+	server_name _;
+	listen 80 default_server;
+	listen [::]:80 default_server ipv6only=on;
+	return 301 $scheme://slidelint.net$request_uri;
 }
