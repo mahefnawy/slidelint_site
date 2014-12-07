@@ -103,7 +103,9 @@
 }
 
 .sponsor {
-  font-size: x-small;
+  margin: 2px;
+  margin-top: 10px;
+  font-size: small;
   float: right;
 }
 
