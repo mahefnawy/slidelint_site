@@ -1,3 +1,10 @@
+
+The website version of slidelint can be accessed at http://slidelint.net/
+
+# http://slidelint.net/
+
+----
+
 # Slidelint Site
 
 slidelint site allows users to check theirs presentation with [slidelint](
