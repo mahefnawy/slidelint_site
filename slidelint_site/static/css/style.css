@@ -106,3 +106,7 @@
   font-size: x-small;
   float: right;
 }
+
+.sponsor img {
+  height: 1em;
+}
