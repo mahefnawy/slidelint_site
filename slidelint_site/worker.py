@@ -67,7 +67,7 @@ def get_pdf_file_preview(path, size='300', timeout=600):
 
     # transforming pdf file in preview images
     cmd = ['docker', 'run', '-t', '-v', dist + ':/presentation',
-           '--networking=false', 'slidelint/box', 'pdftocairo',
+           '--networking=false', 'mithro/slidelint-box', 'pdftocairo',
            '/presentation/' + file_name, '/presentation/preview-page',
            '-jpeg', '-scale-to', size]
 
