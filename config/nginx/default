@@ -57,7 +57,12 @@ server {
 	listen 80;
 	listen [::]:80;
 	server_name bugs.slidelint.net b.slidelint.net;
-	return 301 $scheme://github.com/timvideos/slidelint_siteissues/new;
+
+	if ($request_uri = /) {
+		return 301 $scheme://github.com/timvideos/slidelint_site/issues/new;
+	}
+
+	return 301 $scheme://github.com/timvideos/slidelint_site/issues$request_uri;
 }
 
 server {
