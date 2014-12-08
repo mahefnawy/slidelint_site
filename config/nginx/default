@@ -36,6 +36,10 @@ server {
         location = /500.html {
             root /home/slidelint/slidelint_site/slidelint_site/static;
         }
+
+	location = /robots.txt {
+            root /home/slidelint/slidelint_site/slidelint_site/static;
+	}
 }
 
 server {
