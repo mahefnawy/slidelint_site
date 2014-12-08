@@ -40,6 +40,10 @@ server {
 	location = /robots.txt {
             root /home/slidelint/slidelint_site/slidelint_site/static;
 	}
+
+	location = /favicon.ico {
+            root /home/slidelint/slidelint_site/slidelint_site/static/img;
+	}
 }
 
 server {
